@@ -6,7 +6,7 @@ import { AppDataSource } from './db/data-source';
 import authRoutes from './routes/authRoutes';
 import ofertaRoutes from './routes/ofertaRoutes'
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 // ✅ CORS deve vir primeiro!
 app.use(cors({
