@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 4000;
 
 // ✅ CORS deve vir primeiro!
 app.use(cors({
-  origin: 'https://voluble-chebakia-00f46e.netlify.app',
+  origin: 'https://transcendent-custard-4dfe61.netlify.app',
   credentials: true
 }));
 
