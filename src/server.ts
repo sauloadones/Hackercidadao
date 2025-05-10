@@ -22,7 +22,7 @@ app.use(session({
   saveUninitialized: false,
   cookie: {
     httpOnly: true,
-    secure: false,     // ⚠️ false pois está em HTTP
+    secure: true,     // ⚠️ false pois está em HTTP
     sameSite: 'lax',   // ⚠️ importante para permitir cookies entre origens próximas
     maxAge: 1000 * 60 * 60
   }
