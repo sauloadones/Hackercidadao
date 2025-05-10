@@ -10,11 +10,12 @@ const PORT = process.env.PORT || 4000;
 
 // ✅ CORS deve vir primeiro!
 
-
 app.use(cors({
   origin: 'https://transcendent-custard-4dfe61.netlify.app',
   credentials: true
 }));
+
+app.use(express.json()); // substitui body-parser moderno
 
 app.use(session({
   secret: 'chave-super-secreta',
@@ -22,12 +23,11 @@ app.use(session({
   saveUninitialized: false,
   cookie: {
     httpOnly: true,
-    secure: true,         // 🔒 obrigatório no HTTPS
-    sameSite: 'none'      // 🔥 ESSENCIAL para cross-domain
+    secure: true,          // obrigatório para HTTPS
+    sameSite: 'none'       // ESSENCIAL para cross-origin
   }
 }));
-// ✅ Body parser depois da sessão
-app.use(bodyParser.json());
+
 
 // ✅ Suas rotas
 app.use('/api/auth', authRoutes);
