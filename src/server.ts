@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 // ✅ CORS deve vir primeiro!
 app.use(cors({
-  origin: 'http://localhost:5501',
+  origin: 'http://0.0.0.0:10000',
   credentials: true
 }));
 
