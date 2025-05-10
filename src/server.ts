@@ -10,11 +10,11 @@ const PORT = process.env.PORT || 4000;
 
 // ✅ CORS deve vir primeiro!
 
+
 app.use(cors({
   origin: 'https://frontendhacker.onrender.com',
-  credentials: true
+  credentials: true // se estiver usando cookies ou sessões
 }));
-
 app.use(express.json()); // substitui body-parser moderno
 
 app.use(session({
