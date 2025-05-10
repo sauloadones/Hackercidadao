@@ -23,7 +23,7 @@ app.use(session({
   cookie: {
     httpOnly: true,
     secure: true,     // ⚠️ false pois está em HTTP
-    sameSite: 'lax',   // ⚠️ importante para permitir cookies entre origens próximas
+    sameSite: 'none',   // ⚠️ importante para permitir cookies entre origens próximas
     maxAge: 1000 * 60 * 60
   }
 }));
