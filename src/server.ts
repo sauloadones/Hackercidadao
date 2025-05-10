@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 4000;
 // ✅ CORS deve vir primeiro!
 
 app.use(cors({
-  origin: 'https://transcendent-custard-4dfe61.netlify.app',
+  origin: 'https://frontendhacker.onrender.com',
   credentials: true
 }));
 
